@@ -3,17 +3,17 @@ import './index.css'
 
 const ColorChanger = () => {
 
-const [backgroundColor, setbackgroundColor] = useState('red')
-const colorArray = ['red', 'green', 'blue', 'yellow', 'purple']
+  const [backgroundColor, setbackgroundColor] = useState()
+  const colorArray = ['red', 'green', 'purple', 'blue']
 
-const randomColor = () => {
-    const randomColorIndex = Math.floor(Math.random() * colorArray.length) 
+  const randomColor = () => {
+    const randomColorIndex = Math.floor(Math.random() * colorArray.length)
     return colorArray[randomColorIndex]
-}
+  }
   return (
     <div>
 
-      <button className={backgroundColor} onClick={() => setbackgroundColor(randomColorIndex())}>Random Color</button>
+      <button className={backgroundColor} onClick={() => setbackgroundColor(randomColor())}>Random Color</button>
 
     </div>
   )
